@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi NCR Pollution Source Attribution</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🌫️ Delhi NCR Pollution Source Attribution</h1>
+                <p class="subtitle">AI-powered 6-source pollution analysis</p>
+            </div>
+
+            <div class="header-controls">
+                <input type="date" id="date-input" class="datetime-picker">
+
+                <select id="hour-input" class="hour-picker">
+                    <option value="0">12:00 AM</option>
+                    <option value="1">1:00 AM</option>
+                    <option value="2">2:00 AM</option>
+                    <option value="3">3:00 AM</option>
+                    <option value="4">4:00 AM</option>
+                    <option value="5">5:00 AM</option>
+                    <option value="6">6:00 AM</option>
+                    <option value="7">7:00 AM</option>
+                    <option value="8">8:00 AM</option>
+                    <option value="9">9:00 AM</option>
+                    <option value="10">10:00 AM</option>
+                    <option value="11">11:00 AM</option>
+                    <option value="12">12:00 PM</option>
+                    <option value="13">1:00 PM</option>
+                    <option value="14">2:00 PM</option>
+                    <option value="15">3:00 PM</option>
+                    <option value="16">4:00 PM</option>
+                    <option value="17">5:00 PM</option>
+                    <option value="18">6:00 PM</option>
+                    <option value="19">7:00 PM</option>
+                    <option value="20">8:00 PM</option>
+                    <option value="21">9:00 PM</option>
+                    <option value="22">10:00 PM</option>
+                    <option value="23">11:00 PM</option>
+                </select>
+
+                <button id="refresh-btn" class="btn-primary">Analyze</button>
+                <button id="live-btn" class="btn-live">🔴 Live</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Map Container -->
+            <div class="map-container">
+                <div id="map"></div>
+
+                <div class="map-legend">
+                    <h4>Station Status</h4>
+                    <div class="legend-item"><span class="dot green"></span> Good AQI</div>
+                    <div class="legend-item"><span class="dot yellow"></span> Moderate</div>
+                    <div class="legend-item"><span class="dot orange"></span> Unhealthy (Sensitive)</div>
+                    <div class="legend-item"><span class="dot red"></span> Unhealthy</div>
+                    <div class="legend-item"><span class="dot purple"></span> Very Unhealthy</div>
+                    <div class="legend-item"><span class="dot maroon"></span> Hazardous</div>
+                </div>
+            </div>
+
+            <!-- Side Panel -->
+            <div class="side-panel" id="side-panel">
+
+                <!-- Placeholder -->
+                <div class="panel-placeholder">
+                    <div class="placeholder-icon">📍</div>
+                    <h3>Select a Station</h3>
+                    <p>Click on any marker on the map to view pollution source attribution analysis</p>
+                </div>
+
+                <!-- Panel Content -->
+                <div class="panel-content" id="panel-content" style="display: none;">
+
+                    <!-- Station Header -->
+                    <div class="station-header">
+                        <h2 id="station-name">Station Name</h2>
+                        <span class="confidence-badge" id="confidence-badge">High Confidence</span>
+                    </div>
+
+                    <!-- Outfall Forecast -->
+                    <div class="card" id="outfall-card">
+                        <div class="card-header">
+                            <h3>Outfall Forecast</h3>
+                            <p class="card-subtitle">Where this pollution will travel next</p>
+                        </div>
+                        <div class="card-body" id="outfall-list">
+                            <p class="industries-placeholder">
+                                Select a station to view the dispersion forecast.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Readings -->
+                    <div class="readings-card">
+                        <h4>Current Readings</h4>
+
+                        <div class="readings-grid">
+
+                            <div class="reading-item">
+                                <span class="reading-label">PM2.5</span>
+                                <span class="reading-value" id="reading-pm25">--</span>
+                                <span class="reading-unit">µg/m³</span>
+                            </div>
+
+                            <div class="reading-item">
+                                <span class="reading-label">PM10</span>
+                                <span class="reading-value" id="reading-pm10">--</span>
+                                <span class="reading-unit">µg/m³</span>
+                            </div>
+
+                            <div class="reading-item">
+                                <span class="reading-label">NO₂</span>
+                                <span class="reading-value" id="reading-no2">--</span>
+                                <span class="reading-unit">µg/m³</span>
+                            </div>
+
+                            <div class="reading-item">
+                                <span class="reading-label">SO₂</span>
+                                <span class="reading-value" id="reading-so2">--</span>
+                                <span class="reading-unit">µg/m³</span>
+                            </div>
+
+                            <div class="reading-item">
+                                <span class="reading-label">CO</span>
+                                <span class="reading-value" id="reading-co">--</span>
+                                <span class="reading-unit">mg/m³</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Attribution Chart -->
+                    <div class="chart-card">
+                        <h4>Source Attribution</h4>
+                        <div class="chart-container">
+                            <canvas id="attribution-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Source Details -->
+                    <div class="sources-card">
+                        <h4>Source Details</h4>
+                        <div id="sources-list" class="sources-list"></div>
+                    </div>
+
+                    <!-- Industries -->
+                    <div class="industries-card">
+                        <h4>🏭 Contributing Industries</h4>
+                        <div id="industries-list" class="industries-list">
+                            <p class="industries-placeholder">Nearby industries will appear here</p>
+                        </div>
+                    </div>
+
+                    <!-- Fires -->
+                    <div class="fires-card" id="fires-card" style="display: none;">
+                        <h4>🔥 Top Fire Hotspots</h4>
+                        <div id="fires-list" class="fires-list"></div>
+                    </div>
+
+                    <!-- Meteorology -->
+                    <div class="met-card">
+                        <h4>Meteorology</h4>
+
+                        <div class="met-grid">
+                            <div class="met-item">
+                                <span class="met-icon">🧭</span>
+                                <span class="met-label">Wind Direction</span>
+                                <span class="met-value" id="met-wind-dir">--°</span>
+                            </div>
+
+                            <div class="met-item">
+                                <span class="met-icon">💨</span>
+                                <span class="met-label">Wind Speed</span>
+                                <span class="met-value" id="met-wind-speed">-- m/s</span>
+                            </div>
+
+                            <div class="met-item">
+                                <span class="met-icon">📊</span>
+                                <span class="met-label">BLH</span>
+                                <span class="met-value" id="met-blh">-- m</span>
+                            </div>
+                        </div>
+
+                        <p class="blh-note" id="blh-note"></p>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="summary-card" id="summary-card">
+                        <h4>Summary</h4>
+                        <pre id="summary-text"></pre>
+                    </div>
+<!-- Top Source & Actions -->
+		    <div class="summary-card" id="actions-card">
+    			<h4>Top Source & Actions</h4>
+   		    <div id="actions-content">
+        	    <p class="industries-placeholder">
+            		Once we identify the main source, targeted solutions will appear here.
+                    </p>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

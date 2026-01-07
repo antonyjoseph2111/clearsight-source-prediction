@@ -1,0 +1,63 @@
+station_id,station_name,filename,lat,lon,records,pm25_count,has_pm25,has_no2,has_so2,has_co,has_wind,traffic_exposure,traffic_factor
+10484,Sri Aurobindo Marg Delhi - DPCC,10484_Sri Aurobindo Marg Delhi - DPCC.csv,28.535,77.19,6310,6192,True,True,False,True,True,low,0.4
+10485,Narela Delhi - DPCC,10485_Narela Delhi - DPCC.csv,28.8527,77.0929,6548,6524,True,True,False,False,True,industrial,0.5
+10486,Mundka Delhi - DPCC,10486_Mundka Delhi - DPCC.csv,28.681,77.029,6487,0,False,False,True,False,True,industrial,0.5
+10488,Najafgarh Delhi - DPCC,10488_Najafgarh Delhi - DPCC.csv,28.6092,76.9798,6490,0,False,False,True,True,True,medium,0.7
+10820,Sector 30 Faridabad - HSPCB,10820_Sector 30 Faridabad - HSPCB.csv,28.4089,77.3178,2139,1031,True,True,True,True,True,medium,0.7
+10825,Sector-51 Gurugram - HSPCB,10825_Sector-51 Gurugram - HSPCB.csv,28.4595,77.0266,2329,2329,True,True,True,True,True,medium,0.7
+10831,Rohini Delhi - DPCC,10831_Rohini Delhi - DPCC.csv,28.7495,77.0565,6575,0,False,False,False,True,True,high,1.0
+10900,Teri Gram Gurugram - HSPCB,10900_Teri Gram Gurugram - HSPCB.csv,28.4595,77.0266,1420,0,False,False,False,False,False,medium,0.7
+11603,Chandni Chowk Delhi - IITM,11603_Chandni Chowk Delhi - IITM.csv,28.6506,77.2303,5981,5981,True,False,False,True,True,very_high,1.2
+11607,Lodhi Road Delhi - IITM,11607_Lodhi Road Delhi - IITM.csv,28.5918,77.2273,5910,0,False,True,False,False,True,low,0.4
+17,R K Puram Delhi - DPCC,17_R K Puram Delhi - DPCC.csv,28.5651,77.1752,6392,0,False,True,True,False,True,high,1.0
+235,Anand Vihar New Delhi - DPCC,235_Anand Vihar New Delhi - DPCC.csv,28.6469,77.3164,6458,6366,True,True,False,True,True,very_high,1.2
+2860223,GK1 Oberoi Terrace,2860223_GK1 Oberoi Terrace.csv,28.55,77.24,5218,5218,True,False,False,False,False,medium,0.7
+301388,Sardar Patel Inter College Baghpat - UPPCB,301388_Sardar Patel Inter College Baghpat - UPPCB.csv,28.945,77.221,5229,4816,True,True,False,False,True,medium,0.7
+301,Vikas Sadan Gurugram - HSPCB,301_Vikas Sadan Gurugram - HSPCB.csv,28.4595,77.0266,1348,1348,True,False,True,False,True,medium,0.7
+3024966,NASA GSFC Rutgers Calib N8,3024966_NASA GSFC Rutgers Calib N8.csv,28.6,77.2,5774,5774,True,False,False,False,False,medium,0.7
+3409519,Vasundhara Nagar_UIT Bhiwadi - RSPCB,3409519_Vasundhara Nagar_UIT Bhiwadi - RSPCB.csv,28.6603,77.3573,6433,6367,True,True,True,True,True,high,1.0
+3410004,Amity University Panchgaon - IITM,3410004_Amity University Panchgaon - IITM.csv,28.3274,76.839,5931,5930,True,True,True,True,True,medium,0.7
+4663956,Santushti Apartments Vasant Kunj,4663956_Santushti Apartments Vasant Kunj.csv,28.5218,77.1534,4202,4202,True,False,False,False,False,medium,0.7
+50,Punjabi Bagh Delhi - DPCC,50_Punjabi Bagh Delhi - DPCC.csv,28.6683,77.131,6254,0,False,False,False,True,True,very_high,1.2
+5404,Pusa Delhi - IMD,5404_Pusa Delhi - IMD.csv,28.6395,77.1466,5515,0,False,False,False,True,False,low,0.4
+5541,Burari Crossing New Delhi - IMD,5541_Burari Crossing New Delhi - IMD.csv,28.757,77.193,5635,0,False,False,False,False,False,medium,0.7
+5570,Aya Nagar New Delhi - IMD,5570_Aya Nagar New Delhi - IMD.csv,28.4706,77.1099,5674,0,False,False,False,False,False,low,0.4
+5586,Sirifort Delhi - CPCB,5586_Sirifort Delhi - CPCB.csv,28.5494,77.2224,6523,6523,True,True,True,True,True,low,0.4
+5588,RIICO Ind Area III Bhiwadi - RSPCB,5588_RIICO Ind Area III Bhiwadi - RSPCB.csv,28.2096,76.8539,6485,6484,True,True,True,True,True,industrial,0.5
+5598,Sector - 125 Noida UP - UPPCB,5598_Sector - 125 Noida UP - UPPCB.csv,28.5355,77.391,6237,6176,True,True,True,True,True,medium,0.7
+5610,North Campus DU Delhi - IMD,5610_North Campus DU Delhi - IMD.csv,28.6889,77.2099,6025,6025,True,False,False,False,False,low,0.4
+5613,ITO New Delhi - CPCB,5613_ITO New Delhi - CPCB.csv,28.6289,77.2406,6512,0,False,False,False,False,False,very_high,1.2
+5616,Sector - 62 Noida UP - IMD,5616_Sector - 62 Noida UP - IMD.csv,28.5355,77.391,5837,5837,True,True,False,True,False,medium,0.7
+5622,NSIT Dwarka Delhi - CPCB,5622_NSIT Dwarka Delhi - CPCB.csv,28.5823,77.05,6418,0,False,True,True,False,True,high,1.0
+5626,DTU New Delhi - CPCB,5626_DTU New Delhi - CPCB.csv,28.7499,77.1114,6513,6513,True,True,True,False,True,medium,0.7
+5627,CRRI Mathura Road New Delhi - IMD,5627_CRRI Mathura Road New Delhi - IMD.csv,28.5494,77.2734,6325,6324,True,False,False,False,False,low,0.4
+5630,Shadipur Delhi - CPCB,5630_Shadipur Delhi - CPCB.csv,28.6519,77.1474,6421,5711,True,False,False,True,True,high,1.0
+5634,Lodhi Road New Delhi - IMD,5634_Lodhi Road New Delhi - IMD.csv,28.5918,77.2273,4783,4783,True,True,False,True,False,low,0.4
+5650,IGI Airport T3 Delhi - IMD,5650_IGI Airport T3 Delhi - IMD.csv,28.5562,77.1,5183,5183,True,True,False,True,False,low,0.4
+5665,Vasundhara Ghaziabad - UPPCB,5665_Vasundhara Ghaziabad - UPPCB.csv,28.6692,77.4538,6314,6249,True,True,True,False,True,high,1.0
+6105800,Sector 1 Noida extension,6105800_Sector 1 Noida extension.csv,28.5355,77.391,934,934,True,False,False,False,False,medium,0.7
+6119272,Sector - 5 Vasundhara Ghaziabad Uttar Pradesh,6119272_Sector - 5 Vasundhara Ghaziabad Uttar Pradesh.csv,28.6692,77.4538,632,632,True,False,False,False,False,high,1.0
+6145551,New Delhi Anand Lok,6145551_New Delhi Anand Lok.csv,28.5494,77.2246,103,103,True,False,False,False,False,medium,0.7
+6356,Pusa Delhi - DPCC,6356_Pusa Delhi - DPCC.csv,28.6395,77.1466,6474,6419,True,True,True,True,True,low,0.4
+6358,Mandir Marg New Delhi - DPCC,6358_Mandir Marg New Delhi - DPCC.csv,28.6362,77.201,6395,6269,True,True,True,True,True,high,1.0
+6359,IHBAS Dilshad GardenNew Delhi - CPCB,6359_IHBAS Dilshad GardenNew Delhi - CPCB.csv,28.6814,77.3028,6392,6376,True,False,True,True,True,high,1.0
+6924,Indirapuram Ghaziabad - UPPCB,6924_Indirapuram Ghaziabad - UPPCB.csv,28.6692,77.4538,6368,0,False,True,True,False,True,high,1.0
+6929,Major Dhyan Chand National Stadium Delhi - DPCC,6929_Major Dhyan Chand National Stadium Delhi - DPCC.csv,28.6117,77.2378,6514,0,False,False,True,True,True,low,0.4
+6931,Dwarka-Sector 8 Delhi - DPCC,6931_Dwarka-Sector 8 Delhi - DPCC.csv,28.5823,77.05,6439,0,False,True,False,True,True,high,1.0
+6932,Alipur Delhi - DPCC,6932_Alipur Delhi - DPCC.csv,28.798,77.133,6458,0,False,False,True,True,True,medium,0.7
+6934,Dr Karni Singh Shooting Range Delhi - DPCC,6934_Dr Karni Singh Shooting Range Delhi - DPCC.csv,28.4986,77.264,6485,0,False,True,False,False,True,low,0.4
+6936,Arya Nagar Bahadurgarh - HSPCB,6936_Arya Nagar Bahadurgarh - HSPCB.csv,28.692,76.935,1445,0,False,False,False,False,False,medium,0.7
+6953,Sector-2 IMT Manesar - HSPCB,6953_Sector-2 IMT Manesar - HSPCB.csv,28.3519,76.9336,1326,0,False,True,False,False,False,medium,0.7
+6976,Jai Bhim Nagar Meerut - UPPCB,6976_Jai Bhim Nagar Meerut - UPPCB.csv,28.9845,77.7064,6201,6101,True,False,False,False,True,medium,0.7
+6978,Knowledge Park - III Greater Noida - UPPCB,6978_Knowledge Park - III Greater Noida - UPPCB.csv,28.5355,77.391,6488,0,False,False,False,False,True,medium,0.7
+6980,Sector-1 Noida - UPPCB,6980_Sector-1 Noida - UPPCB.csv,28.5355,77.391,6463,0,False,True,False,True,True,medium,0.7
+6986,Knowledge Park - V Greater Noida - UPPCB,6986_Knowledge Park - V Greater Noida - UPPCB.csv,28.5355,77.391,6561,6535,True,True,False,True,True,medium,0.7
+6988,Sector-116 Noida - UPPCB,6988_Sector-116 Noida - UPPCB.csv,28.5355,77.391,5940,5746,True,True,True,True,True,medium,0.7
+7005,Loni Ghaziabad - UPPCB,7005_Loni Ghaziabad - UPPCB.csv,28.6692,77.4538,6026,5863,True,False,True,False,True,medium,0.7
+7280,Shyam Nagar Palwal - HSPCB,7280_Shyam Nagar Palwal - HSPCB.csv,28.1487,77.332,1237,843,True,False,False,True,False,medium,0.7
+8319,Anand Vihar Hapur - UPPCB,8319_Anand Vihar Hapur - UPPCB.csv,28.6469,77.3164,6368,0,False,True,False,True,True,very_high,1.2
+8365,Nehru Nagar Delhi - DPCC,8365_Nehru Nagar Delhi - DPCC.csv,28.57,77.25,6525,6507,True,False,True,True,True,medium,0.7
+8472,Bawana Delhi - DPCC,8472_Bawana Delhi - DPCC.csv,28.792,77.034,6574,6549,True,False,True,False,True,industrial,0.5
+8475,Sonia Vihar Delhi - DPCC,8475_Sonia Vihar Delhi - DPCC.csv,28.7106,77.2494,6530,0,False,True,True,True,True,high,1.0
+8915,Wazirpur Delhi - DPCC,8915_Wazirpur Delhi - DPCC.csv,28.6969,77.1653,6551,0,False,False,True,True,True,very_high,1.2
+8917,Ashok Vihar Delhi - DPCC,8917_Ashok Vihar Delhi - DPCC.csv,28.6991,77.1724,6509,0,False,False,True,False,True,very_high,1.2
