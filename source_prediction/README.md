@@ -759,32 +759,5 @@ result = process_station_hour(station, timestamp, readings, wind_row, fires_toda
 print(result)
 ```
 
----
 
-# WHY THE PREVIOUS MODEL FAILED
 
-The old Random Forest + IDW model showed 99.9% industry attribution because:
-
-1. **4,700 dense industry points**: Every location had hundreds nearby
-2. **IDW summed all contributions**: Regardless of wind direction
-3. **Feature importance ≠ source attribution**: Model learned seasonality, not sources
-4. **Missed meteorological trapping**: BLH of 198m was completely ignored
-
-This physics-based approach fixes all of these issues.
-
----
-
-# CONTACT / QUESTIONS
-
-This system was designed for a first-year student hackathon project. The methodology is:
-- Explainable (every number has a reason)
-- Validated against known events
-- Honest about limitations
-
-For viva defense, be prepared to explain:
-1. Why NO2 indicates traffic (cite WHO REVIHAAP)
-2. Why SO2 indicates industry (cite US EPA/EIA)
-3. Why PM ratio distinguishes dust from combustion (cite AQMD)
-4. That exact percentages are estimates, not ground truth
-
-Good luck!
